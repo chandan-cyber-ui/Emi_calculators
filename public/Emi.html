@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emi calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+   <link rel="stylesheet" href="../src/styles/Emi.css">
+   <script src="../src/script/Emi.js"></script>
+
+
+</head>
+<body>
+
+    <div id="container">
+       
+
+        <table style="width: 100%;height: 80%; margin: 20px 10px;"text-align="center">
+            
+            <thead>
+                <tr style="padding: 20px;">
+                    <td >Amount you need &#8377; <input type="text"size="10"id="txtamount"onchange="amountTextBoxChange()"></td>
+                    <td > for <input type="text" size="10" id="txtyears" onchange="yeartextBoxChanged()"> years</td>
+                    <td >Intrest rate <input type="text"size="10"id="txtrate"onchange="ratetextboxChnge()">%</td>
+                </tr>
+            </thead>
+
+            <!-- ===============tbody   start   here=============== -->
+
+            <tbody>
+
+            <td>
+                <span>&#8377;50,000</span>
+                <input type="range" min="50000" max="100000"id="rangeamount"onchange="amountChange()">
+                <span>&#8377;100000</span>
+
+            </td>
+            <td>
+                <span>1</span>
+                <input type="range" min="1" max="5"  id="rangeyears"onchange="yearsChange()">
+                <span>5</span>
+            </td>
+            <td>
+
+                 <span>10.9 %</span>
+                <input type="range" min="9" max="21"id="rangerate"onchange="rateChange()">
+                <span>21%</span>
+            </td>
+
+
+
+            
+
+            </tbody>
+
+            <!-- ==========t foot     start   here================= -->
+
+            
+
+
+            
+        
+
+        </table>
+        <div style="width: 100%;height: 20%;text-align: center;">
+            <button onclick="calculateClick()">
+                Calculate
+            </button>
+        </div>
+        <h4 id="result"></h4>
+
+        
+
+
+           
+
+    </div>
+    
+</body>
+</html>
